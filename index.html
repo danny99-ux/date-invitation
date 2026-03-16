@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Our Special Date ❤️</title>
+
+<style>
+
+body{
+font-family:Arial;
+text-align:center;
+background:#ffd6e0;
+}
+
+h1{
+margin-top:100px;
+color:#d6336c;
+}
+
+button{
+padding:15px 30px;
+font-size:18px;
+border:none;
+border-radius:10px;
+margin:10px;
+cursor:pointer;
+}
+
+#yesBtn{
+background:#ff4d6d;
+color:white;
+}
+
+#noBtn{
+background:#444;
+color:white;
+position:absolute;
+}
+
+#reveal{
+display:none;
+margin-top:40px;
+}
+
+img{
+width:300px;
+border-radius:15px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<audio autoplay loop>
+<source src="music.mp3">
+</audio>
+
+<h1>Hi Beautiful ❤️</h1>
+
+<h2>Will you go on a date with me?</h2>
+
+<button id="yesBtn" onclick="yes()">YES ❤️</button>
+<button id="noBtn" onmouseover="move()">NO 😜</button>
+
+<div id="reveal">
+
+<h2>Yay!!! I can't wait 😍</h2>
+
+<h3>The dress I bought for you</h3>
+<img src="dress.jpg">
+
+<h3>Where I'm taking you</h3>
+
+<p>
+📍 Italian Restaurant – Friday 7PM
+</p>
+
+</div>
+
+<script>
+
+function move(){
+
+var button=document.getElementById("noBtn");
+
+var x=Math.random()*window.innerWidth;
+var y=Math.random()*window.innerHeight;
+
+button.style.left=x+"px";
+button.style.top=y+"px";
+
+}
+
+function yes(){
+
+document.getElementById("reveal").style.display="block";
+
+}
+
+</script>
+
+</body>
+</html>
